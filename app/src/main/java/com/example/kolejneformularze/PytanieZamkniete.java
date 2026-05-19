@@ -35,11 +35,10 @@ public class PytanieZamkniete extends Pytanie {
     }
 
     @Override
-    public boolean sprawdzOdpowiedź(char odpowiedz) {
+    public boolean sprawdzOdpowiedz(char odpowiedz) {
         char odpowiedzWielka = Character.toUpperCase(odpowiedz);
         boolean czyPoprawna = odpowiedzWielka == this.poprawnaOdpowiedz;
         this.czyOdpowiedzPoprawna = czyPoprawna;
         return czyPoprawna;
     }
-
 }

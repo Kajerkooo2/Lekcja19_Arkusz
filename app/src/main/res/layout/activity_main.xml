@@ -1,85 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:id="@+id/main"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#2E7CB8"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:id="@+id/main">
 
     <TextView
+        android:id="@+id/appTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Egzamin_Quiz"
-        android:textColor="@android:color/white"
         android:textSize="20sp"
+        android:textColor="@android:color/white"
         android:textStyle="bold"
         android:gravity="center"
         android:paddingBottom="16dp" />
 
     <ImageView
-        android:id="@+id/question_image"
+        android:id="@+id/questionImage"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:contentDescription="@string/question_image"
-        android:scaleType="centerInside" />
+        android:layout_marginTop="30dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Question Image" />
 
     <TextView
-        android:id="@+id/question_text"
+        android:id="@+id/questionText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Które to schronisko?"
-        android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:textStyle="bold"
+        android:textColor="@android:color/white"
         android:gravity="center"
-        android:paddingVertical="16dp" />
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
 
     <RadioGroup
-        android:id="@+id/answers_radio_group"
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingStart="32dp"
-        android:paddingEnd="32dp">
+        android:paddingLeft="16dp">
 
         <RadioButton
+            android:id="@+id/radioButtonA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Na Rysiance."
             android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:paddingVertical="8dp" />
+            android:textSize="14sp" />
 
         <RadioButton
+            android:id="@+id/radioButtonB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Na Wielkiej Raczy."
             android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:paddingVertical="8dp" />
+            android:textSize="14sp" />
 
         <RadioButton
+            android:id="@+id/radioButtonC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Na Wielkiej Rycerzowej."
             android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:paddingVertical="8dp" />
+            android:textSize="14sp" />
 
     </RadioGroup>
 
-    <Button
-        android:id="@+id/next_button"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DALEJ"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:background="#9C27B0"
-        android:layout_marginTop="24dp"
-        android:paddingVertical="12dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wynik: 0"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DALEJ"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="80dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#9C27B0"
+            android:layout_marginLeft="64dp"
+            android:layout_marginRight="64dp" />
+
+    </LinearLayout>
 
 </LinearLayout>

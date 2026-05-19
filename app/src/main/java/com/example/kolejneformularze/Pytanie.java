@@ -2,23 +2,20 @@ package com.example.kolejneformularze;
 
 
 public abstract class Pytanie {
-
-    protected String treść;
+    protected String trescPytania;
     protected String nazwaPliku;
     protected boolean czyOdpowiedzPoprawna;
 
-
-    public Pytanie(String treść, String nazwaPliku) {
-        this.treść = treść;
+    public Pytanie(String trescPytania, String nazwaPliku) {
+        this.trescPytania = trescPytania;
         this.nazwaPliku = nazwaPliku;
         this.czyOdpowiedzPoprawna = false;
     }
 
+    public abstract boolean sprawdzOdpowiedz(char odpowiedz);
 
-    public abstract boolean sprawdzOdpowiedź(char odpowiedz);
-
-    public String getTreść() {
-        return treść;
+    public String getTrescPytania() {
+        return trescPytania;
     }
 
     public String getNazwaPliku() {
@@ -29,9 +26,7 @@ public abstract class Pytanie {
         return czyOdpowiedzPoprawna;
     }
 
-    protected void setCzyOdpowiedzPoprawna(boolean czyOdpowiedzPoprawna) {
+    public void setCzyOdpowiedzPoprawna(boolean czyOdpowiedzPoprawna) {
         this.czyOdpowiedzPoprawna = czyOdpowiedzPoprawna;
     }
-
 }
-
