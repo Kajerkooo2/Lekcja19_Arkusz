@@ -1,5 +1,5 @@
 package com.example.kolejneformularze;
-public abstract class PytanieZamkniete extends Pytanie {
+public class PytanieZamkniete extends Pytanie {
     private String odpowiedzA;
     private String odpowiedzB;
     private String odpowiedzC;
@@ -15,13 +15,8 @@ public abstract class PytanieZamkniete extends Pytanie {
         this.poprawnaOdpowiedz = poprawnaOdpowiedz;
     }
 
-    @Override
-    public boolean sprawdzOdpowiedz(char odpowiedz) {
-        char odpowiedzWielka = Character.toUpperCase(odpowiedz);
-        boolean czyPoprawna = odpowiedzWielka == this.poprawnaOdpowiedz;
-        this.czyOdpowiedzPoprawna = czyPoprawna;
-        return czyPoprawna;
-    }
+
+
 
     public String getOdpowiedzA() {
         return odpowiedzA;
@@ -38,4 +33,13 @@ public abstract class PytanieZamkniete extends Pytanie {
     public char getPoprawnaOdpowiedz() {
         return poprawnaOdpowiedz;
     }
+
+    @Override
+    public boolean sprawdzOdpowiedź(char odpowiedz) {
+        char odpowiedzWielka = Character.toUpperCase(odpowiedz);
+        boolean czyPoprawna = odpowiedzWielka == this.poprawnaOdpowiedz;
+        this.czyOdpowiedzPoprawna = czyPoprawna;
+        return czyPoprawna;
+    }
+
 }

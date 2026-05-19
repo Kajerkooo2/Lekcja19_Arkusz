@@ -15,7 +15,7 @@ public abstract class Pytanie {
     }
 
 
-    public abstract boolean sprawdzOdpowiedź(char odpowiedź);
+    public abstract boolean sprawdzOdpowiedź(char odpowiedz);
 
     public String getTreść() {
         return treść;
@@ -29,11 +29,9 @@ public abstract class Pytanie {
         return czyOdpowiedzPoprawna;
     }
 
-    // Setter
     protected void setCzyOdpowiedzPoprawna(boolean czyOdpowiedzPoprawna) {
         this.czyOdpowiedzPoprawna = czyOdpowiedzPoprawna;
     }
 
-    public abstract boolean sprawdzOdpowiedz(char odpowiedz);
 }
 
